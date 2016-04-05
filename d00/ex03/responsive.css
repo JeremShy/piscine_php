@@ -1,0 +1,59 @@
+* {
+	margin : 0;
+	padding: 0;
+}
+
+body {
+	display: block;
+	font-size: 1em;
+}
+
+h1,p {
+	margin : 0px;
+}
+
+h1 {
+	font-size : 2vw;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td {
+	border: 1px solid black;
+	background-color : silver;
+}
+
+p {
+	font-size: 0.75vw;
+}
+
+p.num {
+	text-align: left;
+	color : red;
+}
+
+p.masse {
+	text-align: right;
+}
+
+h1 {
+	text-align: center;
+	color : green;
+}
+
+th {
+	background-color: red;
+	border : 1px solid black;
+}
+
+table.deuxieme {
+	margin-top: 0.1%;
+}
+
+img {
+	max-height: 200px;
+	width: auto;
+}

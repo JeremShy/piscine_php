@@ -1,0 +1,186 @@
+body {
+	background-color: #3F3F3F;
+	min-width: 1530px;
+	min-height: 866px
+}
+
+div {
+	border-radius: 10px;
+	max-width: 100%;
+	max-height: 100%;
+	box-shadow: 10px 10px 5px #000000;
+	background-color: #909090;
+}
+
+.header {
+	margin: auto;
+	height : 137px;
+	width : 1421px;
+	padding-left: 25px;
+}
+
+img[alt="Day of the 42"] {
+	position: relative;
+	top : -20px;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.loupe {
+	padding-left: 600px;
+	padding-top: 20px;
+}
+
+.reload {
+	height : 25px;
+	width: 25px;
+	position : absolute;
+	top: 20px;
+}
+
+.close {
+	height: 25px;
+	width: 25px;
+	position: relative;
+	top: -25px;
+}
+
+.center {
+	margin: auto;
+	margin-top: 25px;
+	background-color: #3F3F3F;
+	border-radius: 0;
+	box-shadow: none;
+	width : 1380px;
+	height: 580px;
+	position: relative;
+}
+
+.gauche {
+	width: 140px;
+	height: 425px;
+	position: absolute;
+	margin-right: 10px;
+}
+
+.milieu {
+	width: 1020px;
+	height: 580px;
+	margin: auto;
+	padding: 10px;
+}
+
+.droite {
+	position: absolute;
+	width: 140px;
+	height: 425px;
+	top: 0px;
+	right: 5px;
+}
+
+img[title="Avancer"] {
+	position: absolute;
+	width : 75px;
+	padding-left : 30px;
+	padding-top: 20px;
+}
+
+img[title="Prendre"] {
+	position: relative;
+	height:70px;
+	width: 70px;
+	top: 25%;
+	left: 25%;
+}
+
+img[title="Regarder"] {
+	position: absolute;
+	height: 58px;
+	width: 63px;
+	top: 45%;
+	border: solid 5px red;
+	border-radius: 10px;
+	left: 25%;
+}
+
+img[title="Utiliser"] {
+	position : absolute;
+	height: 65px;
+	width: 65px;
+	top: 62%;
+	left: 30%;
+}
+
+img[title="Parler"] {
+	position : absolute;
+	height: 68px;
+	width: 62px;
+	top: 80%;
+	left: 30%;
+}
+
+img[title="Livre"] {
+	position : absolute;
+	height : 86px;
+	width : 60px;
+	left: 25%;
+	top: 5%;
+}
+img[title="Serviette"] {
+	position: absolute;
+	width: 55px;
+	height: 40px;
+	top: 25%;
+	left: 30%;
+}
+
+#Mur {
+	position: absolute;
+	background-image: url("resources/brick.jpg");
+	background-repeat: repeat;
+	border-radius: 0;
+	box-shadow: none;
+	width: 120px;
+	height: 76px;
+	top: 35%;
+	left: 8%;
+}
+
+div.truc_vert {
+	position: absolute;
+	background-color: #88ff89;
+	width: 520px;
+	height: 171px;
+	bottom: -110px;
+	left: -80px;
+	z-index: 1;
+}
+
+p.blabla {
+	margin-left: 5px;
+	font-size: 18px;
+	font-weight: lighter;
+	font-family: "Helvetica";
+	margin-bottom: 1px;
+}
+
+.gros {
+	font-size: 35px;
+}
+
+.ombreuse {
+	text-shadow: 5px 5px 2px #ff0000;
+}
+
+.question {
+	font-style: italic;
+}
+
+input[type="text"] {
+	width: 383px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
