@@ -29,7 +29,7 @@ $i = 0;
 $start = -1;
 while (isset($argv[1][$i]))
 {
-	if (is_nbr($argv[1][$i]))
+	if (is_nbr($argv[1][$i]) && $start == -1)
 		$start = $i;
 	else if ($argv[1][$i] == ' ' && $start != -1 && !isset($p1))
 	{
@@ -67,17 +67,16 @@ while (isset($argv[1][$i]))
 	}
 	else if ($argv[1][$i] == ' ' && $start != -1 && isset($p1) && !isset($p2))
 	{
-		echo "caca";
 		$s2 = substr($argv[1], $start, $i - $start);
 		if (!is_numeric($s2))
 		{
 			echo "Syntax Error\n";
 			exit();
 		}
-		$p2 = intval($s1);
-		$start = -1;
+		$p2 = intval($s2);
 	}
 	else if ($argv[1][$i] == ' ');
+	else if (is_nbr($argv[1][$i]) && (!isset($p1) || !isset($p2)));
 	else
 	{
 		echo "Syntax Error\n";
@@ -86,7 +85,23 @@ while (isset($argv[1][$i]))
 	$i++;
 }
 
-echo "\p1 : $p1, \pop : $pop, \p2 : $p2\n";
+if (!isset($p2) && start != -1 && isset($p1))
+{
+	$s2 = substr($argv[1], $start, $i - $start);
+	if (!is_numeric($s2))
+	{
+		echo "Syntax Error\n";
+		exit();
+	}
+	$p2 = intval($s2);
+}
+
+//echo "\p1 : $p1, \pop : $pop, \p2 : $p2 and \start : $start\n";
+if (!isset($p1) || !isset($pop) || !isset ($p2))
+{
+	echo "Syntax Error\n";
+	exit();
+}
 
 switch (trim($pop))
 {
@@ -104,9 +119,6 @@ switch (trim($pop))
 		break;
 	case "%":
 		$result = $p1 % $p2;
-		break;
-	default :
-		$result = "";
 		break;
 }
 
