@@ -1,9 +1,8 @@
 #!/usr/bin/php
 <?php
 
-if ($argc == 1)
+if ($argc == 1 || $argc == 2)
 	exit();
-$espace = FALSE;
 foreach ($argv as $i => $val)
 {
 	if ($i == 0);
@@ -14,14 +13,10 @@ foreach ($argv as $i => $val)
 		{
 			$array = explode(":", $val);
 			if ($array[0] == $to_search)
-			{
-				if ($espace)
-					echo " ";
-				echo $array[1];
-				$espace = TRUE;
-			}
+				$ans = $array[1];
 		}
 	}
 }
-echo "\n";
+if (isset($ans))
+	echo $ans."\n";
 ?>

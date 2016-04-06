@@ -8,7 +8,7 @@ function handle_link($arr)
 	return ($ret."</a>");
 }
 
-if (argc == 1)
+if ($argc == 1)
 	exit();
 $str = file_get_contents($argv[1]);
 $str = preg_replace_callback('~<a( ?[a-z]*=\"[^\"]*">|[^>]*>)(.*)</a>~', 'handle_link', $str);

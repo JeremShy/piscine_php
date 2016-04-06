@@ -29,7 +29,9 @@ $i = 0;
 $start = -1;
 while (isset($argv[1][$i]))
 {
-	if (is_nbr($argv[1][$i]) && $start == -1)
+	if ($argv[1][$i] == '-' && $start == -1 && !(isset($p1) && !isset($pop)))
+		$start = $i;
+	else if (is_nbr($argv[1][$i]) && $start == -1)
 		$start = $i;
 	else if ($argv[1][$i] == ' ' && $start != -1 && !isset($p1))
 	{
